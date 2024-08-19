@@ -1,0 +1,79 @@
+ManifestFileVersion: 0
+CRC: 598603501
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 62fa940de9d61eef71e0eccab8eafab5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3b2e7e8f361ce961183faa06bc653dce
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 62fa940de9d61eef71e0eccab8eafab5
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f07515ada089df47868559a20dd6783, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ed24508d182abcf4ba02d983e302d34e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 143
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/YellowDraw.prefab
+- Packages/com.meta.xr.sdk.core/Prefabs/OVRPlayerController.prefab
+- Packages/com.meta.xr.sdk.core/Prefabs/OVRControllerPrefab.prefab
+- Assets/prefabs/tenzibou.prefab
+- Packages/com.meta.xr.sdk.core/Prefabs/OVRRuntimeControllerPrefab.prefab
+- Assets/prefabs/tenzimaru.prefab
+- Assets/RedDraw.prefab
+Dependencies:
+- G:/NewGame/UnityProjects/ARdrawer/OVRAssetBundles/OVRMasterBundle/asset_controller0
+- G:/NewGame/UnityProjects/ARdrawer/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- G:/NewGame/UnityProjects/ARdrawer/OVRAssetBundles/OVRMasterBundle/asset_mat0

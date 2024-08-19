@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 4251597737
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3f93616788a4f336700cc55de14f27bb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f424109040eda76d37fb030f3bdd1c84
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3f93616788a4f336700cc55de14f27bb
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 3863570e7e6387a40ae4f323d83291e5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/OculusRuntimeSettings.asset
+- Assets/Resources/OVRPlatformToolSettings.asset
+- Assets/Resources/OVRBuildConfig.asset
+Dependencies: []

@@ -4,7 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/Meta XR Core SDK/65.0.0/Sample Scenes/ControllerModels.unity
+    guid: 39cfe7aa0a2d46c47994d8d0308ec663
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bd7497c90534c474096d2404a9e2ca2f, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7be2b427fcd133542af959dce775b30a, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 607259d246a560540aeffff10957a91b,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 66eac0ee48ba0124b90652a5450ae433,
+      type: 2}
