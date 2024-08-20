@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/Meta XR Core SDK/65.0.0/Sample Scenes/ControllerModels.unity
     guid: 39cfe7aa0a2d46c47994d8d0308ec663
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/TenziScene.unity
+    guid: 07c27b2b80d843e4a9787c1ac52df13c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 607259d246a560540aeffff10957a91b,
       type: 2}
