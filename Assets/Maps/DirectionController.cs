@@ -53,13 +53,13 @@ public class DirectionController : MonoBehaviour
             for (int i = 0; i < leg.steps.Count; i++)
             {
                 int j = i + 1;
-                waylat[i] = "";
+                waylat[i] = "";// 書き込み前に初期化
                 waylng[i] = "";
 
                 destinationRoute += "|" + leg.steps[i].end_location.lat + "," + leg.steps[i].end_location.lng;// 経路は|緯度,経度|という書き方になるので、受け取ったlatitude, longitudeをパイプとカンマを付けて追加していく
-                waylat[i] += leg.steps[i].end_location.lat;
-                waylng[i] += leg.steps[i].end_location.lng;
-                Debug.Log("0番目" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude);
+                waylat[i] = leg.steps[i].end_location.lat;
+                waylng[i] = leg.steps[i].end_location.lng;
+                Debug.Log("0番目(現在地)" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude);
                 Debug.Log(j + "番目" + waylat[i] + "," + waylng[i]);
                 if (i > 20) break;// 経路が多すぎるとUriFormatExceptionで落ちるため上限を設定しておく。
             }
