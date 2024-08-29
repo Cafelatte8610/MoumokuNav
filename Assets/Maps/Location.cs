@@ -1,7 +1,8 @@
-public class Location
+[System.Serializable]
+public struct Location
 {
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
+    public double Latitude;
+    public double Longitude;
 
     public Location(double latitude, double longitude)
     {
