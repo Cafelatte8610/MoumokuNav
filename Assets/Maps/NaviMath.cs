@@ -18,7 +18,7 @@ public static class NaviMath
         double distance = EARTH_RADIUS * Math.Acos(d1 + d2);
         return distance;
     }
-    public static double LatlngDirection(Location from, Location to)
+    public static double LatlngDirection(Location to, Location from)
     {
         var dlat1 = to.Latitude * Deg2Rad;
         var dlng1 = to.Longitude * Deg2Rad;
