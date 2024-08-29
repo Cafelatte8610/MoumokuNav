@@ -5,10 +5,13 @@ using UnityEngine;
 public class Calculation : MonoBehaviour
 {
     private Location[] via = new Location[20];//各経由地
-    public int[] disData = new int[20];
-    public int[] dirData = new int[20];
+    public int[] disData = new int[21];
+    public int[] dirData = new int[21];
     public int time = 0;
+    double lat = 0;
+    double lng = 0;
     public bool switchFlag = false;
+    private bool resetFlag = false;
     Location shibuya = new Location(35.658126d, 139.701616d);
     Location hakata = new Location(33.590322d, 130.420675d);
     public DirectionController directionController;
@@ -26,14 +29,24 @@ public class Calculation : MonoBehaviour
         Location here = new Location(Input.location.lastData.latitude, Input.location.lastData.longitude);//現在地の位置情報
         // if (directionController.waylat[0] != "" && directionController.waylng[0] == "")
         // {
+        if (switchFlag == false && resetFlag == false)
+        {
+            for (int k = 0; k < 19; k++)
+            {
+                disData[k] = 0;
+                dirData[k] = 0;
+                lat = 0;
+                lng = 0;
+            }
+        }
         for (int i = 0; i < 19; i++)
         {
             int j = i + 1;
             int k = i + 2;
-            if (directionController.waylat[j] == "" && directionController.waylng[j] == "") break;
-            double lat = double.Parse(directionController.waylat[i]);
-            double lng = double.Parse(directionController.waylng[i]);
+            lat = double.Parse(directionController.waylat[i]);
+            lng = double.Parse(directionController.waylng[i]);
             via[i] = new Location(lat, lng);
+            if (directionController.waylat[j] == "" && directionController.waylng[j] == "") break;
             if (NaviMath.LatlngDistance(via[i], via[j]) < 10000 && switchFlag == false)
             {
                 if (time >= 0)
@@ -52,9 +65,11 @@ public class Calculation : MonoBehaviour
                     Debug.Log(j + "~" + k + "番目" + dirData[j] + "度");
                 }
                 time++;
+                resetFlag = true;
                 if (time > 30)
                 {
                     switchFlag = true;
+                    resetFlag = false;
                     brailleBlockPlacer.startFlag = true;
                 }
             }

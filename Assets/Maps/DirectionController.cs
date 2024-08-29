@@ -59,6 +59,12 @@ public class DirectionController : MonoBehaviour
             var leg = googleDirectionData.routes[0].legs[0];// データの形式としてroutes[0].legs[0]は固定なので一旦変数に格納
 
             destinationRoute = "";// 書き込み前に初期化
+
+            for (int i = 0; i < 19; i++)
+            {
+                waylat[i] = "";// 書き込み前に初期化
+                waylng[i] = "";
+            }
             for (int i = 0; i < leg.steps.Count; i++)
             {
                 int j = i + 1;

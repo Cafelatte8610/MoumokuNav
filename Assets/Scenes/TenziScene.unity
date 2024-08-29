@@ -352,7 +352,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8ABF\u5E03"
+  m_Text: 
 --- !u!1 &66877009
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,6 +5299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brailleBlockPrefab: {fileID: 5835830176606631710}
+  startBlockPrefab: {fileID: 1815827638}
+  endBlockPrefab: {fileID: 1815827638}
   calculation: {fileID: 1128816939}
   startFlag: 0
 --- !u!1 &948387090
@@ -8472,6 +8474,12 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!1 &1815827638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411637860547049159, guid: 794d313793c744846a97c5c7356dee5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7139846370053694765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840087110
 GameObject:
   m_ObjectHideFlags: 0
