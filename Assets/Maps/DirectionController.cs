@@ -11,9 +11,12 @@ public class DirectionController : MonoBehaviour
     private const string GOOGLE_DIRECTIONS_API_URL = "https://maps.googleapis.com/maps/api/directions/json?key=AIzaSyA9JnXILYeQeQqQc6KAragGK59qz1xEvY8&mode=walking";
     public InputField destination;// 目的地を入力させるInputField
     public string destinationRoute = "";// APIより取得した経路（staticMapControllerに渡すためのパラメータ）
+    private string mem = "memory";
     private int frame = 0;
     public string[] waylat = new string[20];//途中経路の緯度；
     public string[] waylng = new string[20];//途中経路の経度；
+    public Calculation calculation;
+    public BrailleBlockPlacer brailleBlockPlacer;
 
     void Start()
     {
@@ -24,11 +27,17 @@ public class DirectionController : MonoBehaviour
     {
         if (frame >= 300 && destination.text != "")// 更新は5秒に一度、目的地が設定されていない場合は取得しない。
         {
-            Debug.Log(UnityWebRequest.UnEscapeURL(destination.text));
-            StartCoroutine(GetDirection());
+            if (mem != destination.text)//目的地が変わっていない場合は取得しない。
+            {
+                Debug.Log(UnityWebRequest.UnEscapeURL(destination.text));
+                StartCoroutine(GetDirection());
+                mem = destination.text;
+            }
+            // else { Debug.Log("目的地変更なし"); }
             frame = 0;
         }
         frame++;
+        // Debug.Log(calculation.switchFlag);
     }
 
     private IEnumerator GetDirection()
@@ -63,6 +72,9 @@ public class DirectionController : MonoBehaviour
                 Debug.Log(j + "番目" + waylat[i] + "," + waylng[i]);
                 if (i > 20) break;// 経路が多すぎるとUriFormatExceptionで落ちるため上限を設定しておく。
             }
+            calculation.switchFlag = false;
+            calculation.time = -10;
+
             // Debug.Log(destinationRoute);
         }
     }

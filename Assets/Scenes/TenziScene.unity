@@ -1986,9 +1986,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57490799774604016, guid: 701daf3be2fabaf44b41aa8f40c9234a,
         type: 3}
+      propertyPath: calculation
+      value: 
+      objectReference: {fileID: 1128816939}
+    - target: {fileID: 57490799774604016, guid: 701daf3be2fabaf44b41aa8f40c9234a,
+        type: 3}
       propertyPath: destination
       value: 
       objectReference: {fileID: 582420530}
+    - target: {fileID: 57490799774604016, guid: 701daf3be2fabaf44b41aa8f40c9234a,
+        type: 3}
+      propertyPath: brailleBlockPlacer
+      value: 
+      objectReference: {fileID: 947758567}
     - target: {fileID: 2541336491884931202, guid: 701daf3be2fabaf44b41aa8f40c9234a,
         type: 3}
       propertyPath: m_Name
@@ -5226,6 +5236,71 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!1 &947758564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947758566}
+  - component: {fileID: 947758565}
+  - component: {fileID: 947758567}
+  m_Layer: 0
+  m_Name: BlockPlacementController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947758565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947758564}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51688546497076449ad02cfb94f2f695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockPrefab: {fileID: 0}
+  parentTransform: {fileID: 0}
+  scalingFactor: 1
+  directionController: {fileID: 513602524}
+  calculation: {fileID: 1128816939}
+--- !u!4 &947758566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947758564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947758567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947758564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c08fa488a8e12e4885fecb0999b0e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brailleBlockPrefab: {fileID: 5835830176606631710}
+  calculation: {fileID: 1128816939}
+  startFlag: 0
 --- !u!1 &948387090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6123,7 +6198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e72815ec9d7b040b78c9a79f777bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  dirData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  time: 0
+  switchFlag: 0
   directionController: {fileID: 513602524}
+  brailleBlockPlacer: {fileID: 947758567}
 --- !u!1 &1176744934
 GameObject:
   m_ObjectHideFlags: 0
@@ -10241,6 +10321,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5835830176606631708}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5835830176606631710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6953999525978075117, guid: fb723a49fd6d102409017457db15e2c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5835830176606631708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7139846370053694765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10371,3 +10457,4 @@ SceneRoots:
   - {fileID: 1641013817}
   - {fileID: 319469588}
   - {fileID: 1128816938}
+  - {fileID: 947758566}
